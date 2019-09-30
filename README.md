@@ -1,52 +1,54 @@
-![RECON logo](img/logo.png)
+# Hello Page
 
-## Welcome to the development page of the R Epidemics Consortium (RECON) website
+<img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/cobalt.png" width="200">
 
-For the website itself, go to: http://www.repidemicsconsortium.org
+![screenshot](https://user-images.githubusercontent.com/1305617/45956448-87fec380-bfe0-11e8-8b8c-1bbbee7552c6.png)
 
-Please address requests via email to Thibaut Jombart ([thibautjombart@gmail.com](thibautjombart@gmail.com)).
+A so very simple personal site.
 
-# Instructions for editing the website
+This is a [Fork-n-Go](http://jlord.github.io/forkngo) project, so fork to get started making your own.
 
-## Editing the existing pages
+See the demo at [jlord.github.io/hello](http://jlord.github.io/hello).
 
-When the site launched, it contained the following pages, which can all be edited for content or deleted: [`index.md`](./index.md) (the landing page), [`people.md`](./people.md), [`projects.md`](./projects.md), [`resources.md`](./resources.md), [`contact.md`](./contact.md).
+## Create your own
 
-## Editing the navigation menus and the footer section
 
-The links in the menu and in the footer are all configured in the main configuration file, [`_config.yml`](./_config.yml). Specifically, the parameter `navbar-links` inside the file is used to define the top navigation menu, and the `author` parameter just below it is used to define the information that should be shown in the footer.
+| You'll Need:                                 | ☟                                                 |
+|:---------------------------------------------|:--------------------------------------------------|
+| [GitHub](http://www.github.com/join) account | Basic [HTML](http://learn.shayhowe.com/html-css/) |
 
-## How to edit the style of the website
 
-The general layout of the pages can't be changed easily.  But things like colour, spacing, fonts, and any other CSS style can easily be changed by adding CSS rules to the [`recon.css`](./css/recon.css) file. For example, you can change the size of the text, or the background colour of the navigation bar, or the colour of the text in the footer.
+### First, fork this repository.
 
-Note that the template was designed in a way such that it changes drastically when you view it on a big screen (laptop) vs a small screen (phone)
+Click the fork button in the upper right. Now you have a copy of this repository on your GitHub account!
 
-## How to add new pages
+### Rename your fork
 
-To add a new page at the URL `http://reconhub.github.io/example`:
+Once you've forked it, click on Settings and rename your fork, because probably `hello` is not what you want in your URL. Name your new repository: `username.github.io` (but make `username` your username, for instance, I'd use `jlord.github.io`). GitHub will host all website files on the `master` branch of a repo with that account name convention. Woo! More info on that at [pages.github.com](http://www.pages.github.com).
 
-- Add a file named `example.md` to the root directory of this repo
-- The file **must** begin with two lines of three dashes (aka YAML front matter) in order for this new page to use the template. In other words, each file must begin with the following two lines
+You can also give it any 'ol name and GitHub will host it using this pattern: `username.github.io/reponame`. Or you can keep it named `hello` and find it at: `username.github.io/hello`.
 
-    ```
-    ---
-    ---
-    ```
-- You can write either in markdown or in pure HTML
-- If you want to add images, I suggest you place all the images inside the [`img`](./img) folder and refer to images from there.
-- In between the YAML front matter (between the two lines of dashes), you can specify a few parameters:
-  - `title`: Gives a nice big title to the page
-  - `subtitle`: A subtitle to the page
-  - `bigimg`: The path to an image that will be used as a big wide "header image". This path has to point to a local file in this repository, it cannot point to an image on the web
-  - You can see the [`projects`](https://raw.githubusercontent.com/reconhub/reconhub.github.io/2d944bfa887121b8e4f0d88df03a23e424bd1e79/projects.md) page to see an example of using the `title` and `bigimg` parameters
-- If you want to include a list of items on the page, where each item has an image, a short description, and some links, you need to define the items of the list in the YAML front matter and then include `{% include list-circles.html items=page.mylist %}` in the page wherever you want to show the list. Any images will automatically be cropped to be circular, and there wil be a maximum of 4 items per row. See the [`people`](https://raw.githubusercontent.com/reconhub/reconhub.github.io/89dbea917f4223d768e51dfc6e825b974144dea4/people.md) page for an example of how to include a nice list.
+### Make yours live
 
-## How to add new blog posts (aka news)
+1. From your fork's page on GitHub, click the index.html link, then on the next page click Edit.
+2. Make changes to the HTML so that the site reflects your name and bio.
+8. At the bottom of the site, click the Commit button to save your changes.
 
-The pages described above should be added in the root directory. But any page you create inside the `_posts` folder will be treated as a blog post. The nice thing about blog post-type pages is that they will automatically be shown chronologically at `https://reconhub.github.io/blog/`, with all the pagination to previous/next posts taken care of.
+Now your site is live! Go check it out!
 
-Posts are created in exactly the same way as regular pages: you still need to make them `.md` file, they have to have YAML front matter, they can support the `title`/`subtitle`/`bigimg` parameters, you can add lists into them, etc. The only difference is that the name of the file must begin with the date of the post. For example, `2016-08-20-some-news.md`. It's vital that the name of each post contain the date in such a format, followed by whatever name you want, followed by `.md`.
 
-## How to enable comments
-If you want to add Disqus comments to different pages, you need to sign up to Disqus and add your Disqus shortname to the disqus parameter in the `_config.yml` file. By default, all blog posts will have disqus comments at the bottom of the page. You can add disqus to any other page by adding `comments: true` to the YAML of any page.
+### Style
+
+There are basic styles included in `style.css` but go wild and make it your own, try other things!
+
+### Bonus Style
+
+![2](screenshot2.png)
+
+There is another style option included within this repository. If you change the CSS file specified on **line 7** in `index.html` to:
+
+```HTML
+<link rel="stylesheet" type="text/css" href="css/style.css"
+```
+
+Then you'll get the other option! Commit your changes to make it live. Change the file called for back to `css/style2.css` to go back to the other.
