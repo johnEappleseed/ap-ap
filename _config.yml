@@ -1,0 +1,80 @@
+# url is the full website URL
+# baseurl is the website's URL without the hostname
+url: "aboutphysiatry.com"
+baseurl: ""
+
+title: About Physiatry
+description: A website where you can learn more about Physiatry, also known as Physical Medicine and Rehabilitation (PM&R).
+
+# List of links in the navigation bar
+navbar-links:
+  Scope of Practice:
+    - Medical Management: "medicine"
+    - Procedures: "procedures"
+  Patient Conditions: "patients"
+  What is a Physiatrist?: "people"
+  Site Author: "siteauthor"
+
+# Change all these values or delete the ones you don't want (these appear in the footer).
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: "Jordan Perlman"
+  email: "jp@aboutphysiatry.com"
+
+# Select which links to show in the footer
+footer-links-active:
+  github: false
+  email: true
+  rss: false
+  facebook: false
+  twitter: false
+
+# Select which share links to show in posts
+share-links-active:
+  twitter: false
+  facebook: false
+  google: false
+  linkedin: false
+
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+disqus: ""
+
+# Google Analytics ID
+google_analytics: "UA-148164042-1"
+
+# Output options (more information on Jekyll's site)
+timezone: "America/New_York"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false  # add comments to all blog posts
+      social-share: false # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: false
+
+# Exclude these files from production site
+exclude:
+  - LICENSE
+  - README.md
+  - delete_when_done.md
+
+gems:
+  - jekyll-paginate

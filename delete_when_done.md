@@ -1,0 +1,23 @@
+<!-- Typed.js -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/typed.js" type="text/javascript"></script>
+<script>
+  $(function(){
+    $(".typed").typed({
+      strings: ["ddRAD.","ezRAD.", "SE-RAD.", "PE-RAD.","Reference-based RAD."],
+      typeSpeed: 100,
+      loop: true,
+      backDelay: 1000
+    });
+  });
+</script>
+
+<div class="row">
+  <div class="col-sm-12">
+      <div class="text-center">
+          <h1>dDocent is for <span class="typed" style="color:#a50509";></span></h1>
+      </div>
+  </div>
+</div>
+
+https://stackoverflow.com/questions/2754391/embed-javascript-in-markdown
