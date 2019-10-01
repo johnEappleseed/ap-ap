@@ -6,8 +6,10 @@ Physiatrist perform therapeutic procedures as well as diagnostic testing procedu
 
 ### Therapeutic Procedures
 
-#### Pain Management
 These injections can be delivered with ultrasound guidance, fluoroscopic (x-ray) guidance, or neither
+
+#### Pain Management
+
 - epidural steroid injection
 - facet joint injections
 - knee injections
